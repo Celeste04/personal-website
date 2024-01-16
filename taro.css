@@ -1,0 +1,60 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@200&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.taro-pic {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(0,-50%);
+   padding: 3%;
+   overflow-x: hidden;
+}
+
+.taro-pic img{
+    bottom: 0;
+    left: 0;
+    height: 90vh;
+    width: 85vh;
+    border-radius: 10%;
+}
+
+h1 {
+    color: white;
+    padding: 5%;
+    font-size: 8rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .taro-pic {
+        transform: translate(-50%,-50%);
+    }
+    .taro-pic img {
+        width: 500px;
+        height: 500px;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .taro-pic {
+        transform: translate(-15%,-50%);
+    }
+    .taro-pic img {
+        width: 200px;
+        height: 200px;
+        margin-right: 1rem;
+    }
+}
+

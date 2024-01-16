@@ -1,70 +1,420 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
-        <link href = "style.css" rel = "stylesheet"/>
-        <link rel = "stylesheet" type = "text/css" href = 
-        https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css>
-    </head>
-
-    <header id = "header">
-        <div class = "header-image">
-            <h1><b>Jessica Chen</h1></b></h1>
-                <nav class = "main-nav">
-                    <ul>
-                        <li><a href = "#main">Yas</a></li>
-                        <li><a href = "#about">About Me</a></li>
-                        <li><a href = "#projects">Projects</a></li>
-                       
-                    </ul>
-                </nav>
-    </div>
-</header>
-<section class = "home" id = "main">
-<div class = "container">
-    <img src = "images/coolbeans.png">
-    <!--<div class="text">Hello</div>--> 
-</div>
-</section>
-
-<section class = "about-section" id = "about">
-    <div class = "container"> 
-        <h1>About Me</h1>
-        <p>
-            I'm Jessica Chen, a first year computer science student
-            at the University of Waterloo. Asides from coding, I enjoy doodling, burying my face in a book, and jamming out some tunes on the piano.
-             I'm also in a competitive acapella group called 
-             <a href = "https://www.uwacc.com/infullcolour"> In Full Colour</a>
-              . Something special about our group is that all of our songs are original! 
-        </p>
-    </div>
-</section>
-
-<section class = "projects-section" id = "projects">
-    <div class = "container">
-        <h1>Projects</h1>
-        <div class = "proj">
-            <ul>
-                    <a href = "https://github.com/Celeste04/sushi-paint"><img src = "images/sp.jpeg"></a>
-                    <a href = "https://github.com/Celeste04/trials-of-xylia"><img src = "images/tox.png"></a>
-                    <a href = "https://github.com/Celeste04/frogger-remake"><img src = "images/frog.png"></a>
-                    <a href = "https://devpost.com/software/lingovision"><img src = "images/lv.png"></a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="icon" href="./assets/planet.webp" type="image/x-icon">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Jessica Chen</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
-    </div>
-</section>
-
-<footer class = "footer">
-    <div class = "container">
-        <ul>
-            <div class = "social-links">
-                <a href = "mailto: jesschen046@gmail.com"><i class = "fa-solid fa-envelope fa-2x"></i></a>
-                <a href = "https://github.com/Celeste04"><i class = "fa-brands fa-github fa-2x"></i></a>
-                <a href = "https://www.linkedin.com/in/jessica-chen-98510623b/"><i class = "fa-brands fa-linkedin fa-2x"></i></a>
-                <a href = "https://www.instagram.com/jess1ca.c/"><i class = "fa-brands fa-instagram fa-2x"></i></a>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Jessica Chen</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Project</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </div>
-        </ul>
-        <h5> © 2023 Jessica Chen </h5>
+         </div>
+    </nav>
+    <section id="profile">
+        <div class="section-pic-container-1">
+            <img src="./assets/coolgal.png" alt="Jessica profile pic" class="vert-move">
+        </div>
+        <div class="section-text">
+            <p class="section-text-p1">Hello I'm</p>
+            <div class="typewriter"><h1 class="title">Jessica</h1></div>
+            <p class="section-text-p2">Developer and Designer</p>
+        <div class="btn-container">
+            <button class="btn btn-color" onclick="location.href='https://drive.google.com/drive/u/0/home'">Resume</button>
+            <button class="btn btn-color" onclick="location.href='./#contact'">Contact Info</button>
+        </div>
+        <div id="socials-container">
+            <img src="./assets/linkedin.png" alt="linkedin" class="icon" onclick="location.href='https://www.linkedin.com/in/jessicaziyuchen/'">
+            <img src="./assets/github.png" alt="github" class="icon" onclick="location.href='https://github.com/Celeste04'">
+        </div>
     </div>
-</footer>
+    </section>
+    <section id="about">
+        <div class="section-container">
+        <div class="section-pic-container">
+            <img src="./assets/pfp.jpg" alt="that's me" class="about-pic">
+        </div>
+        <div class="about-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <h1 class="title">About Me</h1>
+                </div>
+            </div>
+            <div class="text-container">
+                <p>
+                    Hello! I'm a computer science student at the University of Waterloo with a passion for design and technology.
+                    I love using my imagination to create projects with original designs, then
+                    bring those designs to life with code.
+                        In my freetime, I enjoy drawing, listening to music (piano and acapella), writing and reading stories, and playing board games. 
+                        I also love my cat <a href='./taro.html'>Taro</a>
+                </p>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='./#experience'">
+    </section>
+    <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <h2 class="experience-sub-title">Languages</h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>HTML</h3>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>CSS</h3>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Python</h3>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>JavaScript</h3>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>C/C++</h3>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Bash</h3>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="details-container">
+              <h2 class="experience-sub-title">Tools and Frameworks</h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>React JS</h3>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Node JS</h3>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Express JS</h3>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Git</h3>
+                  </div>
+                </article>
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>MongoDB</h3>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Linux</h3>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Figma</h3>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Photoshop</h3>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Flask</h3>
+                    </div>
+                  </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#projects'"
+        />
+      </section>
+      <section id="projects">
+        <p class="section-text-p1">Browse My Recent</p>
+        <h1 class="ptitle">Projects</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/mraxolotl.jpg"
+                  alt="Mr. Axolotl"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Mr. Axolotl</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color project-btn"
+                  onclick="window.open('https://github.com/Celeste04/MrAxolotl', '_blank')">
+                  Github
+                </button>
+                <button
+                class="btn btn-color project-btn"
+                onclick="window.open('./axolotl.html', '_blank')">
+                Design
+              </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/ssd.png"
+                  alt="Project 2"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Sunny Side Diaries</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color project-btn"
+                  onclick="window.open('https://github.com/xuserena12/sunny-side-diaries', '_blank')">
+                  Github
+                </button>
+                <button
+                  class="btn btn-color project-btn"
+                  onclick="window.open='./ssd.html', '_blank'">
+                  Design
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/lv.png"
+                  alt="Project 3"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">LingoVision</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color project-btn"
+                  onclick="window.open('https://github.com/henrytwo/LingoVision', '_blank')">
+                  Github
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/sp.jpeg"
+                  alt="sushi-paint"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Sushi Paint</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color project-btn"
+                  onclick="window.open('https://github.com/Celeste04/sushi-paint', '_blank')">
+                  Github
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/frog.png"
+                  alt="frogger"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Frogger</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color project-btn"
+                  onclick="window.open('https://github.com/Celeste04/frogger-remake', '_blank')">
+                  Github
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/bliss_logo.png"
+                  alt="bliss"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Bliss</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color project-btn"
+                  onclick="window.open('https://github.com/prestonty/bliss', '_blank')">
+                  Github
+                </button>
+                <button
+                class="btn btn-color project-btn"
+                onclick="window.open('./axolotl.html', '_blank')">
+                Design
+              </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#contact'"
+        />
+      </section>
+    <section id="contact">
+      <p class="section-text">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="email" class="icon contact-icon">
+          <p><a href="mailto:jz3chen@uwaterloo.ca">jz3chen@uwaterloo.ca</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/jessicaziyuchen">LinkedIn</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </footer>
+    <script src="script.js"></script>
+</body>
 </html>
+
